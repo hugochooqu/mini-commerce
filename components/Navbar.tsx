@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineShopping, AiOutlineShoppingCart } from "react-icons/ai";
+import {  AiOutlineShoppingCart } from "react-icons/ai";
 
 const Navbar = () => {
   return (
