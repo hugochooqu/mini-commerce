@@ -21,11 +21,10 @@ const Products = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 gap-y-5 p-4 max-w-7xl mx-auto cursor-pointer">
       {products?.map((product) => (
         <div key={product.id} className="border p-4 shadow-md bg-lime-50 transform transition-transform duration-500 ease-in-out hover:scale-105">
-            <Link href={`/products/${product.slug}`}>
+            <Link href={`/product/${product.slug}`}>
                 <h2 className="text-xl font-semibold">{product.name}</h2>
                 <img src={product.image} alt={product.name} className="w-full h-48 object-cover mt-4" />
-                <p className="text-gray-600 mt-2">{product.description}</p>
-                <p className="text-lg font-bold mt-2">${product.price.toFixed(2)}</p>
+                <p className="text-lg font-normal tracking-wider mt-2">${product.price.toFixed(2)}</p>
             </Link>
         </div>
       ))}

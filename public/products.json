@@ -4,8 +4,8 @@
     "name": "Elegant Gold Necklace",
     "slug": "elegant-gold-necklace",
     "price": 85000,
-    "image": "/images/gold-necklace.jpg",
-    "description": "A timeless 18K gold necklace with intricate detailing, perfect for formal occasions."
+    "image": "/images/elegant-gold.png",
+    "description": "This Elegant Gold Necklace is a statement of timeless luxury and sophistication. Crafted from genuine 18K gold, it features intricate craftsmanship and a flawless finish that radiates elegance. Whether you're attending a formal gala, celebrating an anniversary, or simply want to elevate your everyday look, this piece delivers unmatched beauty and durability. Its subtle design makes it versatile enough to layer with other jewelry or wear solo as a standout piece. Gold symbolizes warmth, wealth, and success — and this necklace embodies all three. A must-have for anyone who values classic style with a modern twist."
   },
   {
     "id": "jewel-2",
@@ -13,7 +13,7 @@
     "slug": "diamond-stud-earrings",
     "price": 120000,
     "image": "/images/diamond-studs.jpg",
-    "description": "Classic diamond stud earrings that sparkle with every move — elegant and refined."
+    "description": "These Diamond Stud Earrings are the epitome of classic beauty and everyday luxury. Featuring perfectly cut, ethically sourced diamonds set in white gold, they add a subtle sparkle that catches the eye without overpowering your look. Ideal for work, weddings, or weekend brunches, they offer unmatched versatility. The secure screw-back ensures comfort and safety all day long. Whether you're dressing up or down, these earrings add a touch of refinement. As a gift or personal treat, diamond studs are always timeless, always loved. They’re not just accessories — they’re heirlooms in the making."
   },
   {
     "id": "jewel-3",
@@ -21,15 +21,15 @@
     "slug": "pearl-drop-earrings",
     "price": 45000,
     "image": "/images/pearl-earrings.jpg",
-    "description": "Elegant freshwater pearl earrings with a delicate drop design."
+    "description": "Graceful and refined, our Pearl Drop Earrings bring the charm of the ocean to your wardrobe. Each earring features a luminous freshwater pearl that dangles delicately from a sleek gold hook, creating a perfect balance of simplicity and elegance. These earrings complement both casual and formal attire, making them an ideal addition to your everyday jewelry collection. Pearls symbolize purity, wisdom, and peace — and wearing them evokes a timeless beauty. Whether it’s a wedding, dinner date, or a quiet afternoon out, these earrings will always leave an impression of classic sophistication."
   },
   {
     "id": "jewel-4",
     "name": "Rose Gold Bracelet",
     "slug": "rose-gold-bracelet",
     "price": 67000,
-    "image": "/images/rose-gold-bracelet.jpg",
-    "description": "Chic rose gold bracelet that adds sophistication to any outfit."
+    "image": "/images/rose-gold-bracelet.png",
+    "description": "This Rose Gold Bracelet is a contemporary classic designed for the modern woman. Made with high-quality rose gold plating, it features a minimalist link design that offers both strength and subtle charm. The warm tones of rose gold flatter all skin types, and its understated elegance pairs well with both office attire and evening wear. Lightweight yet durable, this bracelet feels luxurious on the wrist without being overbearing. Whether stacked with bangles or worn alone, it offers a chic finishing touch to any ensemble. Elevate your everyday look with this sophisticated staple."
   },
   {
     "id": "jewel-5",
@@ -37,7 +37,7 @@
     "slug": "sterling-silver-ring",
     "price": 38000,
     "image": "/images/silver-ring.jpg",
-    "description": "Polished sterling silver ring with a minimal modern design."
+    "description": "Crafted from premium sterling silver, this ring is the definition of modern minimalism. Its polished surface and clean lines create a look that's understated yet impactful. Designed for versatility, it complements both casual and formal outfits with ease. Wear it as a standalone piece or pair it with other rings for a stylish stacked look. Sterling silver is known for its lasting quality and anti-tarnish properties, making this ring a wise investment for any jewelry lover. Comfortable, stylish, and timeless — this ring is your go-to for everyday elegance."
   },
   {
     "id": "jewel-6",
@@ -45,7 +45,7 @@
     "slug": "charm-pendant-necklace",
     "price": 52000,
     "image": "/images/charm-necklace.jpg",
-    "description": "Layered necklace with a personalized charm pendant in gold plating."
+    "description": "Our Charm Pendant Necklace is a personalized piece designed to celebrate your unique story. With a gold-plated chain and a customizable charm, you can carry what matters most — a letter, symbol, or stone that represents you. The design is delicate but durable, striking the perfect balance between elegance and wearability. Ideal for layering or wearing solo, this necklace transitions effortlessly from day to night. It makes a thoughtful gift for birthdays, anniversaries, or any meaningful moment. Add personality to your jewelry box with a piece that speaks your truth."
   },
   {
     "id": "jewel-7",
@@ -53,7 +53,7 @@
     "slug": "crystal-bead-bracelet",
     "price": 30000,
     "image": "/images/crystal-bracelet.jpg",
-    "description": "Handcrafted bracelet made with semi-precious crystal beads."
+    "description": "Our Crystal Bead Bracelet is a radiant mix of style and spirituality. Each semi-precious bead is carefully selected for its unique hue and energy — from calming amethyst to empowering tiger’s eye. Strung together on a durable elastic band, it’s designed to fit comfortably on all wrist sizes. Whether you're seeking inner peace, focus, or just a pop of color, this bracelet has you covered. Wear it solo or stack with others to create your own energetic story. It’s more than a bracelet — it’s a wearable intention."
   },
   {
     "id": "jewel-8",
@@ -61,7 +61,7 @@
     "slug": "statement-choker",
     "price": 48000,
     "image": "/images/statement-choker.jpg",
-    "description": "Bold statement choker with black velvet and gold accents."
+    "description": "Make a bold impression with our Statement Choker. Crafted with luxurious velvet and gold-tone hardware, this piece sits comfortably at the base of the neck and commands attention. Whether paired with an off-the-shoulder top or a sleek evening gown, this choker elevates any look. It blends vintage inspiration with modern edge, creating a one-of-a-kind accessory for those who love to stand out. Adjustable for the perfect fit, it’s as functional as it is fierce. Turn heads and express confidence with a choker that speaks louder than words."
   },
   {
     "id": "jewel-9",
@@ -69,6 +69,6 @@
     "slug": "minimalist-hoop-earrings",
     "price": 27000,
     "image": "/images/hoop-earrings.jpg",
-    "description": "Sleek and simple gold hoop earrings for everyday elegance."
+    "description": "Simple. Elegant. Unforgettable. Our Minimalist Hoop Earrings are crafted from lightweight gold-plated metal and designed with a clean, circular silhouette. They’re the ultimate everyday accessory — polished enough for the office, stylish enough for a night out. The secure clasp ensures comfort and all-day wear without irritation. Pair them with jeans and a tee or a flowing dress — their beauty lies in their versatility. Minimal hoops are a fashion staple for a reason: they complement every face shape, every outfit, every mood. Add them to your jewelry rotation and never look back."
   }
 ]
