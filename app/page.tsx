@@ -1,9 +1,13 @@
-import React from 'react'
+import HeroBanner from "@/components/HeroBanner";
+import React from "react";
+
 
 const page = () => {
   return (
-    <div className='items-center justify-center text-2xl text-red-600'>page</div>
-  )
-}
+    <div className=" ">
+      <HeroBanner />
+    </div>
+  );
+};
 
-export default page
+export default page;

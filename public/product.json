@@ -1,0 +1,74 @@
+[
+  {
+    "id": "jewel-1",
+    "name": "Elegant Gold Necklace",
+    "slug": "elegant-gold-necklace",
+    "price": 85000,
+    "image": "/images/gold-necklace.jpg",
+    "description": "A timeless 18K gold necklace with intricate detailing, perfect for formal occasions."
+  },
+  {
+    "id": "jewel-2",
+    "name": "Diamond Stud Earrings",
+    "slug": "diamond-stud-earrings",
+    "price": 120000,
+    "image": "/images/diamond-studs.jpg",
+    "description": "Classic diamond stud earrings that sparkle with every move — elegant and refined."
+  },
+  {
+    "id": "jewel-3",
+    "name": "Pearl Drop Earrings",
+    "slug": "pearl-drop-earrings",
+    "price": 45000,
+    "image": "/images/pearl-earrings.jpg",
+    "description": "Elegant freshwater pearl earrings with a delicate drop design."
+  },
+  {
+    "id": "jewel-4",
+    "name": "Rose Gold Bracelet",
+    "slug": "rose-gold-bracelet",
+    "price": 67000,
+    "image": "/images/rose-gold-bracelet.jpg",
+    "description": "Chic rose gold bracelet that adds sophistication to any outfit."
+  },
+  {
+    "id": "jewel-5",
+    "name": "Sterling Silver Ring",
+    "slug": "sterling-silver-ring",
+    "price": 38000,
+    "image": "/images/silver-ring.jpg",
+    "description": "Polished sterling silver ring with a minimal modern design."
+  },
+  {
+    "id": "jewel-6",
+    "name": "Charm Pendant Necklace",
+    "slug": "charm-pendant-necklace",
+    "price": 52000,
+    "image": "/images/charm-necklace.jpg",
+    "description": "Layered necklace with a personalized charm pendant in gold plating."
+  },
+  {
+    "id": "jewel-7",
+    "name": "Crystal Bead Bracelet",
+    "slug": "crystal-bead-bracelet",
+    "price": 30000,
+    "image": "/images/crystal-bracelet.jpg",
+    "description": "Handcrafted bracelet made with semi-precious crystal beads."
+  },
+  {
+    "id": "jewel-8",
+    "name": "Statement Choker",
+    "slug": "statement-choker",
+    "price": 48000,
+    "image": "/images/statement-choker.jpg",
+    "description": "Bold statement choker with black velvet and gold accents."
+  },
+  {
+    "id": "jewel-9",
+    "name": "Minimalist Hoop Earrings",
+    "slug": "minimalist-hoop-earrings",
+    "price": 27000,
+    "image": "/images/hoop-earrings.jpg",
+    "description": "Sleek and simple gold hoop earrings for everyday elegance."
+  }
+]
