@@ -1,7 +1,6 @@
 "use client";
 
 import { useCartStore } from "@/stores/cartStore";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
 import React from "react";

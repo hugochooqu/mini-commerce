@@ -1,13 +1,13 @@
 import { useCartStore } from "@/stores/cartStore";
-import { useThemeStore } from "@/stores/themeStore";
+// import { useThemeStore } from "@/stores/themeStore";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { Sun, Moon } from "lucide-react";
+// import { Sun, Moon } from "lucide-react";
 
 const Navbar = () => {
-  const isDark = useThemeStore((state) => state.isDark);
-  const toggleTheme = useThemeStore((state) => state.toggleTheme);
+  // const isDark = useThemeStore((state) => state.isDark);
+  // const toggleTheme = useThemeStore((state) => state.toggleTheme);
   const totalQuantity = useCartStore((state) =>
     state.items.reduce((sum, item) => sum + item.quantity, 0)
   );
