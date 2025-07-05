@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import React from "react";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 const ProductDetails = () => {
   const { slug } = useParams<{ slug: string }>();

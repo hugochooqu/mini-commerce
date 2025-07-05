@@ -39,7 +39,7 @@ export default function CartPage() {
             className="flex flex-col xl:grid xl:grid-cols-12 items-start xl:items-center justify-between border-b border-t border-t-gray-200 gap-4"
           >
             {/* Image */}
-            <div className="flex xl:block w-full xl:col-span-2">
+            <div className="flex xl:block w-full xl:col-span-2 lg:ml-8">
               <Image
                 src={item.image}
                 alt={item.name}
