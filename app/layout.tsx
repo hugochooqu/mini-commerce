@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,14 +29,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+    const isDark = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('theme-preference') || '{}')?.state?.isDark
+    : false;
+
+    console.log('isDark:', isDark);
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}  antialiased ${isDark ? 'dark' : ''}`}
       >
         <QueryClientProvider client={queryClient}>
           <Navbar />
           {children}
+          <Footer />
         </QueryClientProvider>
       </body>
     </html>
