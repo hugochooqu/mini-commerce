@@ -79,17 +79,7 @@ const ProductDetails = () => {
           >
             Add to Cart
           </button>
-          <p className="flex flex-row border border-gray-500 px-6 py-2 mt-4 items-center justify-center">
-              <span className="border-r-1 py-[6px] px-[12px]" >
-                <AiOutlineMinus />
-              </span>
-              <span className=" py-[6px] px-[22px]">
-                0
-              </span>
-              <span className="border-l-1 py-[6px] px-[12px] " >
-                <AiOutlinePlus />
-              </span>
-            </p>
+          
         </div>
       </div>
       </div>
