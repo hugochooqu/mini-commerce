@@ -2,7 +2,6 @@ import AnimatedWrapper from '@/components/AnimatedWrapper';
 import FooterBanner from '@/components/FooterBanner';
 import HeroBanner from '@/components/HeroBanner';
 import Products from '@/components/Products';
-import { motion } from 'framer-motion';
 import React from 'react';
 
 const page = () => {

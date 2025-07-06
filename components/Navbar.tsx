@@ -18,7 +18,7 @@ const Navbar = () => {
       <div>
         <Link href="/cart">
           <button className="relative flex flex-row cursor-pointer">
-            <AiOutlineShoppingCart className="text-3xl" />
+            <AiOutlineShoppingCart className="text-3xl animate-pulse" />
             <span className="absolute right-[-8px] text-[12px] text-white bg-red-500 w-[18px] h-[18px] rounded-[50%] text-center font-semibold">
               {totalQuantity}
             </span>

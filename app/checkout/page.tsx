@@ -4,6 +4,7 @@ import { useCartStore } from '@/stores/cartStore';
 import { useRouter } from 'next/navigation';
 import { v4 as uuidv4 } from 'uuid';
 import React from 'react';
+import toast from 'react-hot-toast';
 
 export default function CheckoutPage() {
   const router = useRouter();
@@ -14,6 +15,7 @@ export default function CheckoutPage() {
   const handlePlaceOrder = () => {
     const orderId = uuidv4().slice(0, 8).toUpperCase(); // Random ID
     clearCart();
+    toast.success('Redirecting...')
     router.push(`/checkout/success?orderId=${orderId}`);
   };
 
