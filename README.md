@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mini-Commerce | Jewelry
 
-## Getting Started
+An elegant, responsive e-commerce jewelry store built with **Next.js 15 App Router**, designed to showcase timeless jewelry pieces with intuitive UX, smart performance optimizations, and strong SEO foundations.
 
-First, run the development server:
+### Live Demo
+(https://mini-commerce-e4kd.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Mini-Commerce is a minimalist jewelry storefront that allows users to:
+- Browse curated products (necklaces, watches, rings, earrings)
+- Filter by category and price range
+- Add items to cart with quantity control
+- Place an order with a confirmation summary
+- Experience light/dark mode and mobile-first design
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Design Approach
 
-To learn more about Next.js, take a look at the following resources:
+- **Layout**: Clean and modern grid layout using Tailwind CSS.
+- **Color Scheme**: Soft neutrals with accent colors for luxury (white, black and lime).
+- **Responsiveness**: Mobile-first design; responsive grid.
+- **Typography**: Elegant serif + sans-serif pairing (`Geist`, `DM Serif`, and custom font `Milven`).
+- **Visual Flair**: Motion-enhanced banners (`framer-motion`), skeleton loaders during fetch, and dynamic cart UI.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tools & Techniques
 
-## Deploy on Vercel
+- **Framework**: [Next.js 14 App Router]
+- **State Management**: [`zustand`] for cart logic with persistence and derived selectors
+- **Data Fetching**: [`@tanstack/react-query`] for catalog fetch with caching and refetching
+- **Styling**: [`tailwindcss`] with custom themes, animations, and responsive utilities
+- **Testing**:
+  - Component test: [`@testing-library/react` + `jest`]
+  - Type-safe mocks; TS strict mode (`"strict": true`)
+- **Code Quality**:
+  - ESLint (`next/core-web-vitals`)
+  - Prettier
+  - No usage of `any`
+- **CI/CD**: Deployed via [Vercel] with automatic preview deploys and production pipeline
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## SEO Strategy
+
+- **Meta Tags**: Title, description, and Open Graph data injected at layout level
+- **Performance**:
+  - Optimized images via `next/image`
+  - Font loading strategy (`font-display: swap`)
+  - Lazy-loading components and hydration control
+
+---
+
+##  Error-Handling Technique
+
+- **Catalogue Fetch Errors**: Graceful fallback with retry & error state UI
+- **Cart Edge Cases**:
+  - Disabled order button if cart is empty
+  - Validations on quantity input
+- **Route Failures**: Custom 404 page with helpful redirection
+- **Testing for Edge Cases**:
+  - Empty cart render
+  - Cart state persistence across reloads
+- **Logging**:
+  - Console warnings for failed fetch/debug states in dev
+
