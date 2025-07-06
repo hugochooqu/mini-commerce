@@ -5,6 +5,7 @@ import { fetchProducts } from '@/lib/fetchProducts';
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import Link from 'next/link';
+import SkeletonCard from './SkeletonCard';
 
 const Products = () => {
   const {
@@ -16,7 +17,15 @@ const Products = () => {
     queryFn: fetchProducts,
   });
 
-  if (isLoading) return <p className="p-4">Loading...</p>;
+  if (isLoading) {
+    return (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <SkeletonCard key={i} />
+        ))}
+      </div>
+    );
+  }
   if (isError) return <p className="p-4 text-red-500">Failed to load products.</p>;
 
   console.log(products);

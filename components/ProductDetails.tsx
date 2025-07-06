@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import React from 'react';
+import SkeletonCard from './SkeletonCard';
 
 const ProductDetails = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -21,7 +22,15 @@ const ProductDetails = () => {
     queryFn: fetchProducts,
   });
 
-  if (isLoading) return <p className="p-4">Loading...</p>;
+  if (isLoading) {
+    return (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+        {Array.from({ length: 1 }).map((_, i) => (
+          <SkeletonCard key={i} />
+        ))}
+      </div>
+    );
+  }
   if (isError || !products) return <p className="p-4 text-red-500">Failed to load product.</p>;
 
   const product = products.find(p => p.slug === slug);
