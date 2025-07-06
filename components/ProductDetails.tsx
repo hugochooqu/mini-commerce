@@ -46,6 +46,7 @@ const ProductDetails = () => {
       slug: product.slug,
       image: product.image,
       price: product.price,
+      type: product.type,
       quantity: 1, // Default quantity
     })
 
@@ -60,18 +61,19 @@ const ProductDetails = () => {
           alt={product.name}
           width={550}
           height={600}
-          className=" h-[65vh] object-cover shadow-lg border border-black bg-lime-50"
+          className=" h-[65vh] object-cover shadow-lg bg-lime-50 transform transition-transform duration-500 ease-in-out hover:scale-105 "
           priority
         />
         <div className="flex flex-col justify-between">
         <div>
           <h1 className="text-3xl lg:text-[60px] font-normal italic">{product.name}</h1>
-          <p className="text-gray-600 mt-6">{product.description}</p>
+          <p className="text-gray-900 mt-6 uppercase font-semibold">{product.type}</p>
+          <p className="text-gray-600 mt-6 lg:mr-8">{product.description}</p>
           <p className="text-2xl font-semibold mt-12">₦{product.price.toLocaleString()}</p>
-
         </div>
 
-        <div className="mt-6 flex flex-row gap-2">
+        <div className="mt-6 flex flex-col  justify-between">
+
           <button
             className="mt-4 px-6 py-2 bg-black lg:w-[390px] text-white  transition duration-300 ease-in-out hover:scale-102 cursor-pointer"
             onClick={addToCart}
@@ -90,7 +92,7 @@ const ProductDetails = () => {
             <Link
               key={item.id}
               href={`/product/${item.slug}`}
-              className="block border  p-4 shadow-sm bg-white hover:shadow-md transform transition-transform duration-500 ease-in-out hover:scale-105"
+              className="block   p-4 shadow-xl bg-lime-50 hover:shadow-md transform transition-transform duration-500 ease-in-out hover:scale-105"
             >
               <h3 className="mt-4 text-lg font-semibold">{item.name}</h3>
               <Image

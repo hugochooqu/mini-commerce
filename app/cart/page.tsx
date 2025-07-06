@@ -51,8 +51,8 @@ export default function CartPage() {
               {/* Details container on mobile/tablet */}
               <div className="w-2/3 flex flex-col justify-between py-4 px-4 xl:hidden">
                 {/* Type + remove */}
-                <div className="flex justify-between text-sm text-gray-500">
-                  <p>Necklace</p>
+                <div className="flex justify-between text-sm text-gray-500 capitalize">
+                  {item.type}
                   <button
                     className="text-red-500 font-bold"
                     onClick={() => removeFromCart(item.id)}
@@ -96,7 +96,7 @@ export default function CartPage() {
               
               <div className="col-span-5 border-r h-full flex flex-col justify-between py-3">
                 <div className="flex flex-row justify-between pr-6">
-                  <p>Nexklace</p>
+                  <p className="capitalize">{item.type}</p>
                   <button
                     className="font-bold rounded-full cursor-pointer text-red-500 px-2 py-0.5 transition transform ease-in-out duration-75 hover:scale-105 "
                     onClick={() => removeFromCart(item.id)}
@@ -130,7 +130,7 @@ export default function CartPage() {
                 </p>
               </div>
               <div className="col-span-2 border-r h-full flex flex-col justify-between items-center py-3">
-                <p className="text-xl tracking-wide">Price</p>
+                <p className="text-base tracking-wide">Price</p>
                 <p className="text-gray-600 text-xl">
                   ₦{item.price.toLocaleString()}
                 </p>
