@@ -56,7 +56,7 @@ const ProductDetails = () => {
       image: product.image,
       price: product.price,
       type: product.type,
-      quantity: 1, // Default quantity
+      quantity: 1, 
     });
   };
 

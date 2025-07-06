@@ -20,14 +20,19 @@ export const useCartStore = create<CartState>()(
         }
         toast.success(`${item.quantity} ${item.name} added to cart`)
       },
+      
       removeFromCart: id => set({ items: get().items.filter(i => i.id !== id) }),
+
       updateQuantity: (id, quantity) =>
         set({
           items: get().items.map(i => (i.id === id ? { ...i, quantity } : i)),
         }),
       clearCart: () => set({ items: [] }),
+
       subtotal: () => get().items.reduce((sum, i) => sum + i.price * i.quantity, 0),
+
       totalQuantity: () => get().items.reduce((sum, i) => sum + i.quantity, 0),
+
       totalPrice: () => get().items.reduce((sum, i) => sum + i.price * i.quantity, 0),
     }),
     { name: 'cart-store' },
