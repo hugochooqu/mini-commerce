@@ -3,7 +3,7 @@ export interface ProductProps {
   name: string;
   slug: string;
   price: number;
-  type: string;
+  type: "necklace" | "ring" | "bracelet" | "earring" | "watch";
   image: string;
   description: string;
 }
@@ -13,7 +13,7 @@ export interface CartItem {
   name: string;
   slug: string;
   price: number;
-  type: string;
+  type: "necklace" | "ring" | "bracelet" | "earring" | "watch";
   image: string;
   quantity: number;
 }
