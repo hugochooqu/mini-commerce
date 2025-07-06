@@ -3,7 +3,7 @@
 An elegant, responsive e-commerce jewelry store built with **Next.js 15 App Router**, designed to showcase timeless jewelry pieces with intuitive UX, smart performance optimizations, and strong SEO foundations.
 
 ### Live Demo
-(https://mini-commerce-e4kd.vercel.app)
+https://mini-commerce-e4kd.vercel.app
 
 ---
 
