@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useSearchParams } from "next/navigation";
-import Link from "next/link";
+import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Success() {
   const params = useSearchParams();
-  const orderId = params.get("orderId");
+  const orderId = params.get('orderId');
 
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center p-6 text-center">

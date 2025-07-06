@@ -1,10 +1,8 @@
-import ProductDetails from '@/components/ProductDetails'
-import React from 'react'
+import ProductDetails from '@/components/ProductDetails';
+import React from 'react';
 
 const page = () => {
-  return (
-    <ProductDetails />
-  )
-}
+  return <ProductDetails />;
+};
 
-export default page
+export default page;

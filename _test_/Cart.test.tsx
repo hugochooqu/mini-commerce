@@ -21,7 +21,7 @@ describe('CartPage', () => {
     };
 
     (useCartStore as unknown as jest.Mock).mockImplementation(
-      (selector: (state: CartState) => unknown) => selector(mockState)
+      (selector: (state: CartState) => unknown) => selector(mockState),
     );
 
     render(<CartPage />);

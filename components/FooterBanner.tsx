@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const FooterBanner = () => {
   return (
@@ -13,7 +13,7 @@ const FooterBanner = () => {
         </h1>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FooterBanner
+export default FooterBanner;

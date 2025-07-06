@@ -14,6 +14,6 @@ export const useThemeStore = create<ThemeState>()(
         set({ isDark: !get().isDark });
       },
     }),
-    { name: 'theme-preference' }
-  )
+    { name: 'theme-preference' },
+  ),
 );

@@ -1,20 +1,21 @@
-'use client'
+'use client';
 
-import { useCartStore } from "@/stores/cartStore";
-import Link from "next/link";
-import React from "react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useCartStore } from '@/stores/cartStore';
+import Link from 'next/link';
+import React from 'react';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Navbar = () => {
-  const totalQuantity = useCartStore((state) =>
-    state.items.reduce((sum, item) => sum + item.quantity, 0)
+  const totalQuantity = useCartStore(state =>
+    state.items.reduce((sum, item) => sum + item.quantity, 0),
   );
 
   return (
     <nav className="flex items-center justify-between px-4 lg:px-12 py-4 bg-white ">
-      <Link href="/" className="text-xl">Mini Commerce</Link>
+      <Link href="/" className="text-xl">
+        Mini Commerce
+      </Link>
       <div>
-        
         <Link href="/cart">
           <button className="relative flex flex-row cursor-pointer">
             <AiOutlineShoppingCart className="text-3xl" />

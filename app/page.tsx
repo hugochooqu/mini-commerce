@@ -1,7 +1,7 @@
-import FooterBanner from "@/components/FooterBanner";
-import HeroBanner from "@/components/HeroBanner";
-import Products from "@/components/Products";
-import React from "react";
+import FooterBanner from '@/components/FooterBanner';
+import HeroBanner from '@/components/HeroBanner';
+import Products from '@/components/Products';
+import React from 'react';
 
 const page = () => {
   return (

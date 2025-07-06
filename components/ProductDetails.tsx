@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { ProductProps } from "@/constants";
-import { fetchProducts } from "@/lib/fetchProducts";
-import { useCartStore } from "@/stores/cartStore";
-import { useQuery } from "@tanstack/react-query";
-import Image from "next/image";
-import Link from "next/link";
-import { useParams } from "next/navigation";
-import React from "react";
+import { ProductProps } from '@/constants';
+import { fetchProducts } from '@/lib/fetchProducts';
+import { useCartStore } from '@/stores/cartStore';
+import { useQuery } from '@tanstack/react-query';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
+import React from 'react';
 
 const ProductDetails = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -17,16 +17,15 @@ const ProductDetails = () => {
     isLoading,
     isError,
   } = useQuery<ProductProps[]>({
-    queryKey: ["products"],
+    queryKey: ['products'],
     queryFn: fetchProducts,
   });
 
   if (isLoading) return <p className="p-4">Loading...</p>;
-  if (isError || !products)
-    return <p className="p-4 text-red-500">Failed to load product.</p>;
+  if (isError || !products) return <p className="p-4 text-red-500">Failed to load product.</p>;
 
-  const product = products.find((p) => p.slug === slug);
-  const otherProducts = products.filter((p) => p.slug !== slug).slice(0, 4);
+  const product = products.find(p => p.slug === slug);
+  const otherProducts = products.filter(p => p.slug !== slug).slice(0, 4);
 
   if (!product) {
     return (
@@ -48,9 +47,7 @@ const ProductDetails = () => {
       price: product.price,
       type: product.type,
       quantity: 1, // Default quantity
-    })
-
-    
+    });
   };
 
   return (
@@ -65,30 +62,28 @@ const ProductDetails = () => {
           priority
         />
         <div className="flex flex-col justify-between">
-        <div>
-          <h1 className="text-3xl lg:text-[60px] font-normal italic">{product.name}</h1>
-          <p className="text-gray-900 mt-6 uppercase font-semibold">{product.type}</p>
-          <p className="text-gray-600 mt-6 lg:mr-8">{product.description}</p>
-          <p className="text-2xl font-semibold mt-12">₦{product.price.toLocaleString()}</p>
-        </div>
+          <div>
+            <h1 className="text-3xl lg:text-[60px] font-normal italic">{product.name}</h1>
+            <p className="text-gray-900 mt-6 uppercase font-semibold">{product.type}</p>
+            <p className="text-gray-600 mt-6 lg:mr-8">{product.description}</p>
+            <p className="text-2xl font-semibold mt-12">₦{product.price.toLocaleString()}</p>
+          </div>
 
-        <div className="mt-6 flex flex-col  justify-between">
-
-          <button
-            className="mt-4 px-6 py-2 bg-black lg:w-[390px] text-white  transition duration-300 ease-in-out hover:scale-102 cursor-pointer"
-            onClick={addToCart}
-          >
-            Add to Cart
-          </button>
-          
+          <div className="mt-6 flex flex-col  justify-between">
+            <button
+              className="mt-4 px-6 py-2 bg-black lg:w-[390px] text-white  transition duration-300 ease-in-out hover:scale-102 cursor-pointer"
+              onClick={addToCart}
+            >
+              Add to Cart
+            </button>
+          </div>
         </div>
       </div>
-      </div>
-      
+
       <div className="mt-20 p-4">
         <h2 className="text-2xl font-bold mb-6 text-gray-800">You may also like</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 ">
-          {otherProducts.map((item) => (
+          {otherProducts.map(item => (
             <Link
               key={item.id}
               href={`/product/${item.slug}`}
@@ -102,8 +97,10 @@ const ProductDetails = () => {
                 height={200}
                 className="w-full h-48 object-cover rounded-md"
               />
-              
-              <p className="text-lg font-normal tracking-wider mt-2">₦{item.price.toLocaleString()}</p>
+
+              <p className="text-lg font-normal tracking-wider mt-2">
+                ₦{item.price.toLocaleString()}
+              </p>
             </Link>
           ))}
         </div>

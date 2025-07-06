@@ -1,6 +1,6 @@
-import nextJest from 'next/jest'
+import nextJest from 'next/jest';
 
-const createJestConfig = nextJest({ dir: './' })
+const createJestConfig = nextJest({ dir: './' });
 
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
@@ -11,6 +11,6 @@ const customJestConfig = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-}
+};
 
-export default createJestConfig(customJestConfig)
+export default createJestConfig(customJestConfig);

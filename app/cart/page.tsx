@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { useCartStore } from "@/stores/cartStore";
-import Image from "next/image";
-import Link from "next/link";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { useCartStore } from '@/stores/cartStore';
+import Image from 'next/image';
+import Link from 'next/link';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
 export default function CartPage() {
-  const items = useCartStore((state) => state.items);
-  const updateQuantity = useCartStore((state) => state.updateQuantity);
-  const removeFromCart = useCartStore((state) => state.removeFromCart);
-  const subtotal = useCartStore((state) => state.totalPrice)();
-  const totalQuantity = useCartStore((state) => state.totalQuantity)();
-  const totalPrice = useCartStore((state) => state.totalPrice)();
+  const items = useCartStore(state => state.items);
+  const updateQuantity = useCartStore(state => state.updateQuantity);
+  const removeFromCart = useCartStore(state => state.removeFromCart);
+  const subtotal = useCartStore(state => state.totalPrice)();
+  const totalQuantity = useCartStore(state => state.totalQuantity)();
+  const totalPrice = useCartStore(state => state.totalPrice)();
 
   if (items.length === 0) {
     return (
@@ -33,7 +33,7 @@ export default function CartPage() {
 
       {/* Cart Items */}
       <div className="space-y-6">
-        {items.map((item) => (
+        {items.map(item => (
           <div
             key={item.id}
             className="flex flex-col xl:grid xl:grid-cols-12 items-start xl:items-center justify-between border-b border-t border-t-gray-200 gap-4"
@@ -68,9 +68,7 @@ export default function CartPage() {
                   <div className="flex items-center border border-gray-500 px-3 py-1">
                     <button
                       className="px-2"
-                      onClick={() =>
-                        updateQuantity(item.id, Math.max(1, item.quantity - 1))
-                      }
+                      onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}
                     >
                       <AiOutlineMinus />
                     </button>
@@ -93,7 +91,6 @@ export default function CartPage() {
 
             {/* XL/Desktop Details layout */}
             <div className="hidden xl:grid h-full xl:col-span-10 xl:grid-cols-10 items-center gap-4 lg:mx-8">
-              
               <div className="col-span-5 border-r h-full flex flex-col justify-between py-3">
                 <div className="flex flex-row justify-between pr-6">
                   <p className="capitalize">{item.type}</p>
@@ -113,9 +110,7 @@ export default function CartPage() {
                 <p className="flex flex-row border border-gray-500 px-6 py-2 mt-4 items-center justify-center">
                   <span
                     className="border-r-1 py-[6px] px-[12px] cursor-pointer"
-                    onClick={() =>
-                      updateQuantity(item.id, Math.max(1, item.quantity - 1))
-                    }
+                    onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}
                   >
                     <AiOutlineMinus />
                   </span>
@@ -131,9 +126,7 @@ export default function CartPage() {
               </div>
               <div className="col-span-2 border-r h-full flex flex-col justify-between items-center py-3">
                 <p className="text-base tracking-wide">Price</p>
-                <p className="text-gray-600 text-xl">
-                  ₦{item.price.toLocaleString()}
-                </p>
+                <p className="text-gray-600 text-xl">₦{item.price.toLocaleString()}</p>
               </div>
             </div>
           </div>
@@ -143,9 +136,7 @@ export default function CartPage() {
       {/* Summary */}
       <div className="mt-10 pt-6 text-left space-y-2 mb-10">
         <p className="text-gray-700">Subtotal: ₦{subtotal.toLocaleString()}</p>
-        <h2 className="text-xl font-bold">
-          Total: ₦{totalPrice.toLocaleString()}
-        </h2>
+        <h2 className="text-xl font-bold">Total: ₦{totalPrice.toLocaleString()}</h2>
         <Link
           href="/checkout"
           className="mt-4 inline-block px-16 py-4 bg-black text-white transition duration-300 ease-in-out hover:scale-102 cursor-pointer"

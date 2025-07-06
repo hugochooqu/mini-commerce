@@ -1,5 +1,5 @@
-import { Suspense } from "react";
-import Success from "@/components/Success";
+import { Suspense } from 'react';
+import Success from '@/components/Success';
 
 export default function SuccessPage() {
   return (
