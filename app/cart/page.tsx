@@ -3,7 +3,7 @@
 import { useCartStore } from '@/stores/cartStore';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { AiOutlineMinus, AiOutlinePlus, AiOutlineShopping } from 'react-icons/ai';
 
 export default function CartPage() {
   const items = useCartStore(state => state.items);
@@ -15,7 +15,8 @@ export default function CartPage() {
 
   if (items.length === 0) {
     return (
-      <div className="p-6 text-center">
+      <div className="p-6 w-full text-center h-[70vh] flex flex-col items-center justify-center">
+        <AiOutlineShopping size={100} className='text-center my-6' />
         <h2 className="text-2xl font-bold mb-4">Your cart is empty</h2>
         <Link href="/" className="text-indigo-600 underline">
           Back to catalogue
@@ -25,7 +26,7 @@ export default function CartPage() {
   }
 
   return (
-    <div className="max-w-[1450px] mx-auto p-6">
+    <div className="max-w-[1450px] mx-auto p-6 ">
       <div className="flex flex-row justify-between">
         <h1 className="text-3xl font-bold mb-6">Your Cart</h1>
         <p className="text-gray-700 text-xl">Items: {totalQuantity}</p>

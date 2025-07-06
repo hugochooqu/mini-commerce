@@ -50,7 +50,7 @@ const Products = () => {
               className="w-full h-68 object-cover mt-12"
               unoptimized
             />
-            <p className="text-lg font-normal tracking-wider mt-12">#{product.price.toFixed(2)}</p>
+            <p className="text-lg font-normal tracking-wider mt-12">₦{product.price.toFixed(2)}</p>
           </Link>
         </div>
       ))}

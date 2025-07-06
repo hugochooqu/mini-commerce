@@ -1,4 +1,5 @@
 import { CartState } from '@/constants';
+import toast from 'react-hot-toast';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
@@ -17,6 +18,7 @@ export const useCartStore = create<CartState>()(
         } else {
           set({ items: [...get().items, item] });
         }
+        toast.success(`${item.quantity} ${item.name} added to cart`)
       },
       removeFromCart: id => set({ items: get().items.filter(i => i.id !== id) }),
       updateQuantity: (id, quantity) =>
