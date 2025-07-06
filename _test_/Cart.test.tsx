@@ -4,7 +4,6 @@ import CartPage from '@/app/cart/page';
 import { useCartStore } from '@/stores/cartStore';
 import type { CartState } from '@/constants';
 
-// Explicitly type the mocked store
 jest.mock('@/stores/cartStore', () => ({
   useCartStore: jest.fn(),
 }));
